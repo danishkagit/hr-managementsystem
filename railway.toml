@@ -1,0 +1,21 @@
+# Railway Configuration
+[build]
+  builder = "nixpacks"
+  buildCommand = "npm install"
+
+[deploy]
+  # Health check endpoint
+  healthcheckPath = "/health"
+  healthcheckTimeout = 100
+  
+  # Start the Express server
+  startCommand = "node src/server.js"
+  numReplicas = 1
+  
+  # Restart policy
+  restartPolicyType = "on-failure"
+  restartPolicyMaxRetries = 3
+
+[service]
+  # Public HTTP port
+  port = 4000
