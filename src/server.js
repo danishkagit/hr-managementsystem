@@ -14,12 +14,14 @@ const http = require('http');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 const path = require('path');
+const swaggerUi = require('swagger-ui-express');
 
 const config = require('./config/server');
 const logger = require('./utils/logger');
 const { sequelize } = require('./models');
 const { errorHandler, notFoundHandler } = require('./middleware/errorHandler');
 const { initSocket } = require('./sockets');
+const swaggerSpec = require('./config/swagger');
 
 // Initialize Express app
 const app = express();
@@ -63,6 +65,13 @@ app.use('/api/', limiter);
 // ---------------------------------------------------------------
 // ROUTES
 // ---------------------------------------------------------------
+
+// Swagger API documentation
+app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+  explorer: true,
+  customSiteTitle: 'HR Management System - API Docs',
+  customCss: '.swagger-ui .topbar { display: none }',
+}));
 
 // API v1 routes
 app.use('/api/v1', require('./routes'));

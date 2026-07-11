@@ -14,7 +14,14 @@
     "db:setup": "npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "db:reset": "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
   },
-  "keywords": ["hrms", "human-resources", "management", "postgresql", "socket.io", "realtime"],
+  "keywords": [
+    "hrms",
+    "human-resources",
+    "management",
+    "postgresql",
+    "socket.io",
+    "realtime"
+  ],
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -27,6 +34,8 @@
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.3",
     "socket.io": "^4.7.5",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1",
     "uuid": "^10.0.0",
     "winston": "^3.13.0"
   },
