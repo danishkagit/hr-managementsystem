@@ -23,7 +23,7 @@ const parseDatabaseUrl = (url) => {
       database: parsed.pathname.replace(/^\//, ''),
       ssl: parsed.searchParams.get('sslmode') === 'require',
     };
-  } catch {
+  } catch (e) {
     return null;
   }
 };
