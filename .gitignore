@@ -1,0 +1,105 @@
+# =======================
+# Node.js
+# =======================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+.pnpm-debug.log*
+lerna-debug.log*
+
+# =======================
+# Environment Variables
+# =======================
+.env
+.env.local
+.env.*.local
+
+# =======================
+# Logs
+# =======================
+logs/
+*.log
+
+# =======================
+# Database
+# =======================
+*.sqlite
+*.sqlite3
+*.db
+
+# =======================
+# OS Files
+# =======================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+._*
+
+# =======================
+# IDE / Editor
+# =======================
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+.vs/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.project
+.classpath
+.settings/
+
+# =======================
+# Testing & Coverage
+# =======================
+coverage/
+.nyc_output/
+*.lcov
+
+# =======================
+# Build / Temp
+# =======================
+dist/
+build/
+.tmp/
+.temp/
+tmp/
+temp/
+
+# =======================
+# Dependency directories
+# =======================
+jspm_packages/
+bower_components/
+
+# =======================
+# Optional npm cache directory
+# =======================
+.npm/
+
+# =======================
+# Optional REPL history
+# =======================
+.node_repl_history
+.ngrok/
+
+# =======================
+# Docker
+# =======================
+.docker/
+docker-compose.override.yml
+
+# =======================
+# Secrets / Certificates
+# =======================
+*.key
+*.pem
+*.cert
+secrets/
